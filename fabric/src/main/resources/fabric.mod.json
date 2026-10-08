@@ -11,7 +11,7 @@
   ],
   "contact": {
     "repo": "https://github.com/fishcute/Celestial",
-    "sources": "https://github.com/fishcute/Celestial1.18.2",
+    "sources": "https://github.com/fishcute/Celestial1.21",
     "issues": "https://github.com/fishcute/Celestial/issues"
   },
 
@@ -28,7 +28,8 @@
     "celestial.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.15.7",
-    "minecraft": ">=1.19.4"
+    "fabricloader": ">=0.18.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21"
   }
 }

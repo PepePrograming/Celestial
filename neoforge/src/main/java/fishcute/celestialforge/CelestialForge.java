@@ -20,7 +20,7 @@ public class CelestialForge {
     public static KeyMapping reloadSky = new KeyMapping(
             "key.reload_sky",
             InputConstants.KEY_F10,
-            "key.categories.misc"
+            KeyMapping.Category.MISC
     );
 
     public CelestialForge(IEventBus modEventBus, ModContainer modContainer) {

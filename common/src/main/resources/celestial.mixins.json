@@ -6,18 +6,13 @@
   "compatibilityLevel": "JAVA_21",
   "client": [
     "BiomeMixin",
-    "ClientLevelMixin",
-    "DimensionSpecialEffectsMixin",
-    "FogRendererMixin",
     "LevelRendererMixin",
+    "SkyRendererMixin",
     "MinecraftMixin",
     "PoseMixin",
-    "PoseStackMixin",
     "ReloadableResourceManagerMixin",
     "api.CameraMixin",
-    "api.PoseStackMixin",
-    "api.ShaderInstanceMixin",
-    "api.VertexBufferMixin"
+    "api.PoseStackMixin"
   ],
   "injectors": {
     "defaultRequire": 1

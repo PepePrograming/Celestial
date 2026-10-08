@@ -18,12 +18,12 @@ A Minecraft mod for Fabric and Forge that allows you to customize the sky.
 [[dependencies.celestial]]
    modId="neoforge"
    mandatory=true
-   versionRange="[21.0.0-beta,)"
+   versionRange="[21.11,)"
    ordering="NONE"
    side="BOTH"
 [[dependencies.celestial]]
    modId="minecraft"
    mandatory=true
-   versionRange="[1.21,1.21.1)"
+   versionRange="[1.21.11,1.22)"
    ordering="NONE"
    side="BOTH"

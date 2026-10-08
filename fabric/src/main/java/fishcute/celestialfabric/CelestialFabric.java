@@ -18,7 +18,7 @@ public class CelestialFabric implements ClientModInitializer {
         reloadSky = KeyBindingHelper.registerKeyBinding(new KeyMapping(
                 "key.reload_sky",
                 InputConstants.KEY_F10,
-                "key.categories.misc"
+                KeyMapping.Category.MISC
         ));
 
         ClientTickEvents.END_CLIENT_TICK.register((endTick -> {

@@ -1,12 +1,12 @@
 package fishcute.celestial;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.BufferBuilder;
 import fishcute.celestialmain.api.minecraft.IMcVector;
 import fishcute.celestialmain.api.minecraft.wrappers.IBufferBuilderWrapper;
 import fishcute.celestialmain.api.minecraft.wrappers.IResourceLocationWrapper;
 import fishcute.celestialmain.api.minecraft.wrappers.IShaderInstanceWrapper;
 import fishcute.celestialmain.version.independent.Instances;
+import net.minecraft.resources.Identifier;
 
 public class VInstances {
     public static void setInstances() {
@@ -23,6 +23,7 @@ public class VInstances {
 
     public static fishcute.celestial.BufferBuilder builder;
     public static BufferBuilder bufferBuilder = null;
+    public static Identifier texture = null;
 
     protected interface Factories {
         class BufferBuilder implements IBufferBuilderWrapper.Factory {
@@ -35,14 +36,15 @@ public class VInstances {
         class ShaderInstance implements IShaderInstanceWrapper.Factory {
             @Override
             public IShaderInstanceWrapper build() {
-                return (IShaderInstanceWrapper) RenderSystem.getShader();
+                return new IShaderInstanceWrapper() {
+                };
             }
         }
 
         class ResourceLocation implements IResourceLocationWrapper.Factory {
             @Override
             public IResourceLocationWrapper build(String name) {
-                return (IResourceLocationWrapper) (Object) net.minecraft.resources.ResourceLocation.parse(name);
+                return (IResourceLocationWrapper) (Object) net.minecraft.resources.Identifier.parse(name);
             }
         }
 
